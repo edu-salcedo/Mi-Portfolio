@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 50%;
+}
+
+body{
+    background-color: cornflowerblue;
+}
+
+.portfolio{
+   width: 90%;
+   max-width: 1400px;
+   margin: auto;
+}
+
+.contenedor{
+   display: flex;
+   justify-content: space-between;
+   color:crimson;
+ }
