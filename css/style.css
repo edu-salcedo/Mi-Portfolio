@@ -2,24 +2,78 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+}
+.max-with{
+    max-width: 1300px;
+    padding:0 80px;
+    margin: auto; 
+}
+.navbar{
+    position:fixed;
+    width: 100%;
+    padding: 15px 0;
+    background: burlywood;
+    font-family: 'ubuntu',sans-serif;
 }
 
-img{
-    width: 50%;
+.navbar .max-with{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+   color: rgb(63, 0, 209);
+   font-size: 30px;
+   font-weight: 600;
+
 }
 
-body{
-    background-color: cornflowerblue;
-}
-
-.portfolio{
-   width: 90%;
-   max-width: 1400px;
-   margin: auto;
-}
-
-.contenedor{
-   display: flex;
-   justify-content: space-between;
+.navbar .menu li{
    color:crimson;
+   list-style: none;
+   display: inline-block;
  }
+
+ .navbar .menu li a{
+    color:black;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left:  25px;
+ }
+  
+ /* fuente de el home  */
+
+ .home {
+    display: flex;
+     background: rgb(42, 8, 56);
+     height: 100vh;
+     color: gainsboro;
+ }
+
+ .about{
+     text-align: center;
+ }
+
+
+ /* fuente proyectos */
+
+ .proytec{
+     
+ }
+
+.proytec .carousel .card img{
+     height: 150px;
+     width: 150px;
+     object-fit: cover;
+     border-radius: 50%;
+     border: 5px rgb(45, 210, 30) solid;
+  
+     color: darkcyan;
+ }
+ .proytec .carousel .card{
+    background: darkgray;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+}
