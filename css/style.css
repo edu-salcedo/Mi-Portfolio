@@ -161,8 +161,6 @@ h2{
    
 }
 
-
-
 /* ************************
 font proyectos */
 
@@ -233,10 +231,10 @@ p {
  contact */
 
 footer {
-  
+    text-align: center;
     background-color: black;
     color: white;
-    text-align: center;
+   
 }
 
 .fab{
