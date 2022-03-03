@@ -6,35 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel = "preconnect" href = "https://fonts.gstatic.com">
-   
-   <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
-  
-   <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Pattaya&display=swap" rel="stylesheet">
-   
-   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">   
    <link rel="stylesheet" href="css/style.css">
-   <script src="https://kit.fontawesome.com/2608d06942.js" crossorigin="anonymous"></script>
+   <script src="https://kit.fontawesome.com/05ffc85a48.js" crossorigin="anonymous"></script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,500;1,600;1,700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
   <header>
-      <input type="checkbox"id="btn">
-      <label for="btn">
-          <img src="img/icons/menu.png" alt="">
-      </label>
-      <nav class="navbar">
-          <ul class="menu">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#projects">Project</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="logo">
-                <a href="#">Portfolio</a>            
-            </div>
-     </nav> 
-  </header>
- 
+   <nav class="nav_container">
+       <div class="logo">
+           <h1 class="logo1">edu</h1>
+           <h1 class="logo2">salcedo</h1>
+       </div>
+
+       <button class="nav-toggle"><i class="fa-solid fa-bars"></i></button>
+           <ul class="nav-menu">
+               <li class="nav-link" ><a href="#home">home</a></li>
+               <li class="nav-link" ><a href="#about">about</a></li>
+               <li class="nav-link" ><a href="#skills">skills</a></li>
+               <li class="nav-link" ><a href="#projects">projects</a></li>
+           </ul>
+        </nav>
+    </header>
+  
     <!-- seccion home-->
      <section class="home" id ="home" >
             <div class="home-content">
@@ -61,7 +57,7 @@
         </div>              
     </section>
 
-    <section class="skills">
+    <section class="skills" id="skills">
         <div class="container">
             <h2>knowledge</h2>
             <div class="text">              
@@ -74,9 +70,9 @@
             </div>
         </div>
         <div class="icons">
-          <img src="img/icons/C.png" alt="lenguaje c">
-          <img src="img/icons/C++.png" alt="lenguaje c++">
-          <img src="img/icons/C2.png" alt="lenguaje c#">
+          <img src="img/c.png" alt="lenguaje c">
+          <img src="img/C++.png" alt="lenguaje c++">
+          <img src="img/C2.png" alt="lenguaje c#">
         </div>
     </section>
 
@@ -117,5 +113,6 @@
             </a>   
         </div>
     </footer>
+    <script src="./JS/index.js"></script>
 </body>
 </html>

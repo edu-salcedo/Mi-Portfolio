@@ -1,61 +1,182 @@
+/* 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,500;1,600;1,700&family=Poppins:wght@300;400;500;600;700&display=swap'); */
+
+:root{
+    --navbar-color:rgb(3, 38, 116) ;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
-    letter-spacing: .2em;
 }
 
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* barra de navegacion */
+header{
+    background-color:var(--navbar-color);
+    position: fixed;  
+    width: 100%;
+    height: 50px;
+    top: 0;
+    left: 0;
+} 
+
+.logo{
+    display: flex;
+    color: rgb(238, 242, 245);
+    line-height: 50px;
+}
+.logo1::before{
+    content: "<";
+    color: darkgrey;
+} 
+
+.logo1::after{
+    content: "/";
+    color: rgb(255, 238, 0);
+}
+.logo2::after{
+    content: ">";
+    color: darkgrey;
+}
+
+.nav-toggle{
+    color: #fff;
+    background: none;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+.nav_container{
+ display: flex;
+ justify-content: space-around;
+ margin: auto;
+}
+
+.nav-menu{
+ list-style: none;
+ display: flex;
+}
+
+.nav-link {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    margin: 0 20px;
+    line-height: 50px;
+}
+.nav-link a{
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.4s;
+}
+.nav-link a:hover{
+     border-bottom:ridge;
+     border-top:ridge;
+     font-size: 20px;
+     border-color: rgb(255, 238, 0);
+}
+
+
+@media(max-width:800px){
+    header{
+        
+    } 
+    .nav_container{
+    
+    }
+    .nav-menu{
+        flex-direction: column; 
+        background-color:var(--navbar-color);
+        position: fixed;
+        width: 100%;
+        top:50px;
+        height: 100vh;
+        align-items: center;
+        left: 100%;
+        transition: 0.5s;
+    }
+    .nav-toggle{
+        display: block;
+    }
+    .menu-active{
+        left: 0%;
+    }
+    
+}
+
+
+/* home secction */
+
+
+.home{
+ 
+   background-image: url("../img/fondo.jpg");
+   text-align: center;
+   height: 800px;
+   width: 100%;
+   
+}
+
+.home-content{
+
+}
+
+.about img{
+    width: 50px;
+}
+
+
+/* 
 body{  
-    background: cornsilk;
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
 }
 header{
-
     position:fixed;
     width: 100%;
-    padding: 30px 3rem;
-    background: rgb(29, 27, 25);
-    font-family: 'Bungee Inline', cursive;
-}
-
-#btn{
-    display: none;
-}
-header label{
-    display: none;
-}
-header label:hover{
-    cursor: pointer;
-    background: rgba(0,0,0,0.3);
 }
 .navbar{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content:space-around;
+    background-color: black;
+    height: 4rem;
 }
-
-.navbar .logo a{
-   color: rgb(112, 52, 252);
+.navbar .logo a {
+   color:#fff;
    font-size: 30px;
+}
+.navbar .logo a::before{
+    content: "3du";
+    color: blue;
+    font-weight: 900;
 }
 
 .navbar .menu li{ 
    list-style: none;
-   display: inline-block;
-   
+   display: inline-block; 
  }
 
+ .navbar .menu{
+     background-color: #a12c05;
+     width: 100%;
+ }
  .navbar .menu li a{
     color: coral;
-    font-size: 18px;
-    font-weight: 500;
-    margin-left:  25px;
+    font-size: 1.3em;
+    font-weight: 800;
     transition: color 0.3s ease;
  }
  .navbar .menu li a:hover{
     color: crimson;
+    font-size: 20px;
+    transition:0.5s;
  }
 
 
@@ -96,10 +217,10 @@ header label:hover{
 
 }
  
- /* fuente de el home  */
+ */
 
 
- .home{
+ /* .home{
     display: flex;
     flex-wrap:wrap ;
     background-image: url("../img/fondo.jpg") ;
@@ -139,7 +260,7 @@ header label:hover{
 
  /* fuente de el about  */
 
- .about{
+ /* .about{
      display: flex;
      width: 60%;
      border-radius: 80px;
@@ -161,8 +282,6 @@ header label:hover{
 .about-content p:nth-child(1){
  margin: 30px;
  padding: 30px;
- color: rgb(110, 50, 4);
- font-family: 'Pattaya', sans-serif;
  font-weight: bold;
  font-size: 23px;
  
@@ -179,10 +298,9 @@ header label:hover{
 
 /* ************************
 font skills*/
-h2{
+/*h2{
     color: rgb(10, 173, 83);
     font-size: 35px;
-    font-family: 'Bungee Inline', cursive;
 
 }
 
@@ -212,11 +330,11 @@ h2{
     width: 150px;
     height: 150px;
    
-}
+} */
 
 /* ************************
 font proyectos */
-
+/*
 .projects h1{
    
     color: rgb(7, 5, 95);
@@ -235,26 +353,27 @@ font proyectos */
 }
 
 .project-container {
-    display: flex;
-    justify-content: space-around;
+    padding-top: 80px;
+    display: grid;
+    width: 90%;
+    margin:  0 auto;
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fit,minmax(260px,auto));
+
 }
 .project-card {
     
-    margin: 1.8rem;
-    text-align: center;
     background: rgba( 164, 163, 173, 0.35 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-    border-radius: 7px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: .5em;
-
+    display: grid;
+    gap:1em;
+    width: 260px;
+    margin:10px auto;
 }
+
+.project-card
+
 
 .project-image {
     height: 200px;
@@ -290,7 +409,7 @@ p {
 
 /* ***************************************
  contact */
-
+/*
 footer {
     text-align: center;
     background-color: black;
@@ -303,8 +422,4 @@ footer {
     color: rgb(223, 205, 205);
     font-size: calc(3em + 1vw);
     
-}
-
-
-/* 
-******************************** */
+} */
