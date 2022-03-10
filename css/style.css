@@ -3,7 +3,7 @@
 
 :root{
     --navbar-color:rgb(80, 131, 241) ;
-    --color-ornage:chocolate;
+    --color-contrast:rgb(250, 161, 44);
 }
 *{
     margin: 0;
@@ -39,7 +39,7 @@ header{
 
 .logo1::after{
     content: "/";
-    color:var(--color-ornage);
+    color:var(--color-contrast);
 }
 .logo2::after{
     content: ">";
@@ -81,7 +81,7 @@ header{
      border-bottom:ridge;
      border-top:ridge;
      font-size: 20px;
-     border-color: rgb(255, 238, 0);
+     border-color: var(--color-contrast);
 }
 
 
@@ -159,9 +159,15 @@ overflow: hidden; */
 
 .about{
    margin: 2rem;
+   
 }
 .about-me{
   text-align: center;
+}
+
+.about-me::after{
+  content:" Me";
+  color: var(--color-contrast);
 }
 .about-content{
     display: grid;
@@ -171,6 +177,10 @@ overflow: hidden; */
     padding: 2rem;
 }
 
+.subtitle2{
+    font-size:1.5rem;
+    color: #181716;
+}
 .subtitle{
     font-size:2.5rem;
    color: #040746;
@@ -199,16 +209,28 @@ overflow: hidden; */
 
     font-size: 1.3rem;
     font-weight: 500;
-
-   
 }
 
-
+.btnCV{
+    margin-top: 2rem;
+    background-color: #4a4af8;
+    padding: .5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    box-shadow: 3px 3px rgb(234, 236, 241);
+    border: none;
+}
 
  /* knoledge content */
 
  .Knowledge{
-
+    display:grid;
+    margin: 0 2rem;
+    border-radius: 15px;
+    grid-template-columns: repeat(auto-fit,minmax(24rem,1fr));
+    background-color: #cbcbcf;
  }
  .container-Knowledge{
    margin: 4rem 5rem;
@@ -242,7 +264,7 @@ overflow: hidden; */
 .project-container{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
-    gap: 1rem;
+    gap: 2rem;
     padding: 2rem;
 }
 
@@ -259,8 +281,9 @@ overflow: hidden; */
 
 .project-image{
     width: 20rem;
-    height: 23rem;
+    height: 20rem;
     margin-bottom: 2rem;
+    border-radius: 50%;
 }
 
 
@@ -269,6 +292,27 @@ overflow: hidden; */
 }
 
 
+
+footer{
+    list-style: solid;
+    background-color: var(--navbar-color);
+    display: flex;
+    justify-content: center;
+    height: 5rem;
+    align-items: center;
+}
+
+.fa-github-alt{
+   font-size: 2rem;
+   margin: 0 2rem;
+   color: #000;
+}
+
+.fa-linkedin{
+    margin: 0 2rem;
+    font-size: 2rem;
+    color: #040746;
+}
 
 
  /* sectin proyect */
